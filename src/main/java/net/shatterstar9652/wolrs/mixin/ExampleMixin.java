@@ -1,4 +1,4 @@
-package com.shatterstar9652.wotrs.mixin;
+package net.shatterstar9652.wolrs.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;

@@ -1,9 +1,9 @@
 {
 	"required": true,
-	"package": "com.shatterstar9652.wotrs.mixin.client",
+	"package": "net.shatterstar9652.wolrs.mixin",
 	"compatibilityLevel": "JAVA_17",
-	"client": [
-		"ExampleClientMixin"
+	"mixins": [
+		"ExampleMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
