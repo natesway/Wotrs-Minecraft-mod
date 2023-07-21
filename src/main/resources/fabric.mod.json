@@ -3,23 +3,26 @@
 	"id": "world-of-the-rising-sun",
 	"version": "${version}",
 	"name": "World of the Rising Sun",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "World of the Rising Sun mod made from scratch by shatter",
 	"authors": [
-		"Me!"
+		"shatterstar9652"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/world-of-the-rising-sun/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.shatterstar9652.wolrs.ExampleMod"
+			"net.shatterstar9652.wolrs.WorldOfTheRisingSun"
+		],
+		"client": [
+			"net.shatterstar9652.wolrs.WorldOfTheRisingSunClient"
 		],
 		"fabric-datagen": [
-			"net.shatterstar9652.wolrs.ExampleModDataGenerator"
+			"net.shatterstar9652.wolrs.WorldOfTheRisingSunDataGenerator"
 		]
 	},
 	"mixins": [
