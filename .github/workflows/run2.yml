@@ -26,7 +26,9 @@ jobs:
           distribution: 'microsoft'
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew
-      - name: build
+      - name: setup gradle
+        run: ./gradlew     
+      - name: build sources
         run: ./gradlew genSources --debug > logfile.txt
       - name: Compress folder
         run: tar -cvzf /tmp/workspace.tar.gz . 
@@ -39,6 +41,6 @@ jobs:
           path: |
             /tmp/workspace.tar.gz
             ./logfile.txt
-            /home/runner/.gradle
-            /tmp/gradle.tar.gz
+          #/home/runner/.gradle
+          #/tmp/gradle.tar.gz
         #workspace.tar.gz
