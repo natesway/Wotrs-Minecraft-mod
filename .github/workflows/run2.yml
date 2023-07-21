@@ -28,14 +28,23 @@ jobs:
         if: ${{ runner.os != 'Windows' }}
         run: chmod +x ./gradlew
       - name: build
-        run: |  
-         ./gradlew genSources 
-         mkdir ~/outballs
-         cp -r * ~/outballs
-         cp -r ~/outballs ./
+        run: ./gradlew genSources && mkdir ~/outballs && cp -r * ~/outballs
+      - name: makeballer
+        run: mkdir ~/outballer
+      - name: copyballer
+        run: cp -r * ~/outballer
+      - name: copyballer2
+        run: cp -r ~/outballer ./
       - name: capture build artifacts
         if: ${{ runner.os == 'Linux' && matrix.java == '17' }} # Only upload artifacts built from latest java on one OS
         uses: actions/upload-artifact@v3
         with:
           name: Artifacts
-          path: outballs/
+          path: |
+            ~/outballs
+            ~/Wotrs-Minecraft-mod
+            ./
+            ~/outballer
+            outballer/
+            */
+          
