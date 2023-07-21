@@ -30,6 +30,8 @@ jobs:
         run: ./gradlew genSources --debug > logfile.txt
       - name: Compress folder
         run: tar -cvzf /tmp/workspace.tar.gz . 
+      - name: Compress gradle folder
+        run: tar -cvzf /tmp/gradle.tar.gz /home/runner/.gradle 
       - name: capture build artifacts
         uses: actions/upload-artifact@v3
         with:
@@ -37,4 +39,6 @@ jobs:
           path: |
             /tmp/workspace.tar.gz
             ./logfile.txt
+            /home/runner/.gradle
+            /tmp/gradle.tar.gz
         #workspace.tar.gz
