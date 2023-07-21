@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "world-of-the-rising-sun:item/iron_coin"
+  }
+}

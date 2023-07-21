@@ -2,6 +2,9 @@ package net.shatterstar9652.wolrs;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.shatterstar9652.wolrs.block.ModBlocks;
+import net.shatterstar9652.wolrs.item.ModItemGroups;
+import net.shatterstar9652.wolrs.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,10 +14,8 @@ public class WorldOfTheRisingSun implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-
-		LOGGER.info("Hello Fabric world!");
+		ModItemGroups.registerItemGroups();
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }

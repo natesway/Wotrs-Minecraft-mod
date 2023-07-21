@@ -1,0 +1,11 @@
+{
+  "item.world-of-the-rising-sun.gold_coin": "Gold Coin",
+  "item.world-of-the-rising-sun.iron_coin": "Iron Coin",
+  "item.world-of-the-rising-sun.vulssian_ruble": "Vulssian Ruble",
+  "item.world-of-the-rising-sun.conorvida_dollar": "The Conorvida Dollar",
+
+  "block.world-of-the-rising-sun:test_block": "Test Block for Debug",
+
+
+  "itemgroup.wotrs":  "World of the Rising Sun Mod items"
+}
