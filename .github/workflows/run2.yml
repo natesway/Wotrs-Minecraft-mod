@@ -3,9 +3,8 @@
 # certain platforms or Java versions, and provides a first line of defence
 # against bad commits.
 
-name: build2
+name: fml
 on: [pull_request, push]
-
 jobs:
   build:
     strategy:
@@ -17,6 +16,9 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v3
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+        fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
       - name: validate gradle wrapper
         uses: gradle/wrapper-validation-action@v1
       - name: setup jdk ${{ matrix.java }}
@@ -28,23 +30,15 @@ jobs:
         if: ${{ runner.os != 'Windows' }}
         run: chmod +x ./gradlew
       - name: build
-        run: ./gradlew genSources && mkdir ~/outballs && cp -r * ~/outballs
-      - name: makeballer
-        run: mkdir ~/outballer
-      - name: copyballer
-        run: cp -r * ~/outballer
-      - name: copyballer2
-        run: cp -r ~/outballer ./
-      - name: capture build artifacts
-        if: ${{ runner.os == 'Linux' && matrix.java == '17' }} # Only upload artifacts built from latest java on one OS
-        uses: actions/upload-artifact@v3
+        run: ./gradlew genSources
+      - name: Commit files
+      run: |
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git commit -a -m "Add changes"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          name: Artifacts
-          path: |
-            ~/outballs
-            ~/Wotrs-Minecraft-mod
-            ./
-            ~/outballer
-            outballer/
-            */
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
           
