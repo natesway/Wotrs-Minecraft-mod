@@ -27,13 +27,14 @@ jobs:
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew
       - name: build
-        run: ./gradlew genSources --debug 
+        run: ./gradlew genSources --debug > logfile.txt
       - name: Compress folder
-        run: tar -cvzf /tmp/workspace.tar.gz .
+        run: tar -cvzf /tmp/workspace.tar.gz . 
       - name: capture build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: Artifacts
           path: |
             /tmp/workspace.tar.gz
+            ./logfile.txt
         #workspace.tar.gz
