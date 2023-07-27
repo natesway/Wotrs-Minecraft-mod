@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "WEW",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:paper"
+        },
+        "W": {
+            "item": "word-of-the-rising-sun:moneypaper"
+        },
+        "E": {
+            "item": "minecraft:emerald"
+        }
+    },
+    "result": {
+        "item": "world-of-the-rising-sun:vulssian_ruble",
+        "count": 1
+    }
+}

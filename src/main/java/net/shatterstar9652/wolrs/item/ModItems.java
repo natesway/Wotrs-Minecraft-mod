@@ -16,12 +16,15 @@ public class ModItems {
     public static final Item IRONCOIN = registerItem("iron_coin", new Item(new FabricItemSettings()));
     public static final Item VULSSIANRUBLE = registerItem("vulssian_ruble", new Item(new FabricItemSettings()));
     public static final Item CONORVIDADOLLAR = registerItem("conorvida_dollar", new Item(new FabricItemSettings()));
+    public static final Item CURRENCYPAPER = registerItem("moneypaper", new Item(new FabricItemSettings()));
+
 
     private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries) {
         entries.add(GOLDCOIN);
         entries.add(IRONCOIN);
         entries.add(VULSSIANRUBLE);
         entries.add(CONORVIDADOLLAR);
+        entries.add(CURRENCYPAPER);
     }
 
     private static Item registerItem(String name, Item item) {

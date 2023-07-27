@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "WEW",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stone_button"
+    },
+    "W": {
+      "item": "minecraft:stone"
+    },
+    "E": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "result": {
+    "item": "world-of-the-rising-sun:iron_coin",
+    "count": 15
+  }
+}

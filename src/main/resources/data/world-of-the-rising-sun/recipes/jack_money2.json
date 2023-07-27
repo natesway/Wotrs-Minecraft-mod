@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "WDW",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:paper"
+        },
+        "W": {
+            "item": "word-of-the-rising-sun:moneypaper"
+        },
+        "D": {
+            "item": "minecraft:diamond"
+        }
+    },
+    "result": {
+        "item": "world-of-the-rising-sun:vulssian_ruble",
+        "count": 2
+    }
+}

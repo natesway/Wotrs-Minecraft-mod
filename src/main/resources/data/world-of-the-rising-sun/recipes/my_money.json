@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "WgW",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:paper"
+        },
+        "W": {
+            "item": "word-of-the-rising-sun:moneypaper"
+        },
+        "g": {
+            "item": "minecraft:gold_ingot"
+        }
+    },
+    "result": {
+        "item": "world-of-the-rising-sun:conorvida_dollar",
+        "count": 6
+    }
+}

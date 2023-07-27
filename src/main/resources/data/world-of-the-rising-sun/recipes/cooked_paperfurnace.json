@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "minecraft:paper"
+    },
+    "result": "word-of-the-rising-sun:moneypaper",
+    "experience": 100.1,
+    "cookingtime": 100
+}
